@@ -42,7 +42,7 @@ export const vistaCrear = (req, res) => {
 export const vistaModificar = (req, res) => {
     res.render("modificar", {
         title: "Modificar producto",
-        about: "Primero buscamos el id, luego generamos un formulario para actualizar los campos"
+        about: "Primero buscamos el id"
     })
 }
 
@@ -51,6 +51,6 @@ export const vistaModificar = (req, res) => {
 export const vistaEliminar = (req, res) => {
     res.render("eliminar", {
         title: "Eliminar producto",
-        about: "Primero buscamos el id, luego generamos un boton para eliminar y un prompt para confirmar"
+        about: "Primero buscamos el id"
     })
 }

@@ -9,6 +9,10 @@ h1 {
     text-align: center;
 }
 
+body{
+    background-color:#02433a;
+    font-family:"Braah One", sans-serif;
+}
 
 /* /////////////
     Header
@@ -95,3 +99,4 @@ header {
     margin: 0 auto;
     margin-top: 60px;
 }
+

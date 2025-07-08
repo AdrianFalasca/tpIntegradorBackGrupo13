@@ -45,7 +45,7 @@ getProduct_form.addEventListener("submit", async (event) => {
         ///////////////////
         // Optimizacion 4: Manejamos el error en una posible respuesta no existosa
         if(!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`); // Error 404: Not Found
+            throw new Error(`Error ${response.status}: ${response.statusText}. Id no encontrado`); // Error 404: Not Found
         }
 
 
@@ -181,6 +181,7 @@ async function actualizarProducto(event) {
             // Vaciamos si existiera la lista y el formulario de actualizacion del producto
             getId_lista.innerHTML = "";
             updateForm_container.innerHTML = "";
+            window.location.href = "/dashboard";
 
         } else {
             let error = await response.json();

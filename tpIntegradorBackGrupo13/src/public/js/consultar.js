@@ -41,7 +41,7 @@ getProduct_form.addEventListener("submit", async (event) => {
         ///////////////////
         // Optimizacion 4: Manejamos el error en una posible respuesta no existosa
         if(!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`); // Error 404: Not Found
+            throw new Error(`Error ${response.status}: ${response.statusText}. Id no encontrado`); // Error 404: Not Found
         }
 
 

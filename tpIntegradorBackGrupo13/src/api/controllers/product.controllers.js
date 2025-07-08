@@ -17,12 +17,10 @@ export const getAllProducts = async (req, res) => {
 
     } catch (error) {
         
-        console.error("Error obteniendo productos", error);
+        console.error("Error obteniendo productos", error.message);
 
         res.status(500).json({
-            
             error: "Error interno del servidor al obtener productos"
-            
         })
     }    
 }
@@ -114,7 +112,7 @@ export const modifyProduct = async (req, res) => {
         });
 
     } catch (error) {
-        console.error("Error al actualizar el producto", error);
+        console.error("Error al actualizar el producto", error.message);
 
         res.status(500).json({
             message: "Error interno del servidor",
@@ -150,7 +148,7 @@ export const removeProduct = async (req, res) =>{
         });
 
     } catch (error) {
-        console.error("Error en DELETE /products/:id", error);
+        console.error("Error en DELETE /products/:id", error.message);
 
         res.status(500).json({
             message: `Error al eliminar producto con id ${id}`, error,
